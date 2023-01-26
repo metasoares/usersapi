@@ -56,4 +56,4 @@ app.get('/user',(req, res) => {
 
 
 
-app.listen(PORT, () => console.log(`http://localhost:${PORT}/users`))
+app.listen(() => console.log(`https://usersapi.vercel.app/users`))
