@@ -6,10 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users API</title>
     <link rel="stylesheet" href="./style.css">
+    <script
+    src="https://kit.fontawesome.com/0ffb388943.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
 <body>
-    <div class="users-container">
-        <p class="users-label">Users API</p>
+    <div class="home-container">
+        <header>
+            <nav class="nav-items">
+                <h2 class="title"><a href="" class="title-link">Users</a></h2>
+              <ul>
+                <li><a href="" class="home-link">Home</a></li>
+                <li><a href="" class="docs-link">Docs</a></li>
+                <li><a href="https://github.com/metasoares/usersapi.git" target="_blank" class="github-link">GitHub</a></li>
+                <li><a href="./more/coffee.html" class="github-link">Buy me coffee</a></li>
+              </ul>
+              <button type="button" class="btn"><a class="btn-link" href="/more/contact.html">Contact Us</a></button>
+            </nav>
+        </header>
+        <main class="main-container">
+            <div class="container">
+                <div class="usersapi-container">
+                    <div class="left-usersapi-description">
+                        <div class="copyBoard-container">
+                            <p class="copy-link">https://usersapi.com.vercel.app/users</p><span class="copy-icon">Copy</span>
+                        </div>
+                        <strong>Users API</strong>
+                        <p>Users API is a free online api for your shopping, e-commerce and login website. You can also use it for your programming course.Others use it for demo class, testing and etc.</p>
+                        <div class="usersapi-description">
+                            <div class="github-container">
+                             <p>View github</p>
+                             <div class="github-icon">
+                                <i class="fa-brands fa-github"></i>
+                             </div>
+                            </div>
+                            <div class="doc-container">
+                             <p>View Doc</p>
+                             <div class="doc-icon">
+                                <i class="fa-solid fa-file"></i>
+                             </div>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="right-usersapi-description">
+                       <img src="./assets/IMG_0766.PNG" class="tech-image-container" alt="api image"  />
+                    </div>
+                </div>
+                <!-- Second one -->
+                <div class="details-usersapi-container">
+                    <div class="routes-container">
+                        <strong>Routes</strong>
+                        <p>These HTTP methods are supported</p>
+                        <div class="routes-detail-container">
+                            <!-- <ul class="left-ones"> -->
+                                <ul class="firstRow-list">
+                                    <li class="left">GET</li>
+                                    <li class="right">/users</li>
+                                </ul>
+                                <ul class="secondRow-list">
+                                   <li class="left">GET</li>
+                                   <li class="right">/user/1</li>
+                                </ul>
+                                <ul class="thirdRow-list">
+                                   <li class="left">GET</li>
+                                   <li class="right">/user?name=John</li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="resource-container">
+                        <strong>Resources</strong>
+                        <p>User API has one main resource, i.e, users for multiple website tasks.</p>
+                        <ul class="resource-detail-container">
+                             <li class="left">Users</li>  
+                             <li class="right">4 users</li>
+                             </ul>
+                    </div>
+                 </div>
+
+                <!-- Third One -->
+                <h2 class="example-title">Example Codes</h2>
+                <div class="example-codes-container">
+                    <div class="fetch-example-code-container">
+                        <strong class="example-text">Using Fetch</strong>
+                        <p class="text">Grab the below code and test it out</p>
+                        <div class="fetch-code-container">
+                            <p>fetch('https://usersapi.vercel.com/users')
+                            .then(response => response.json())
+                            .then(data => console.log(data))</p>
+                        </div>
+                    </div>
+                    <div class="axios-example-code-container">
+                        <strong class="example-text">Using Axios</strong>
+                        <p class="text">Install axios and import it to your current working file
+                             before testing the below code. For simple html-css-js project you should just import axios cdn.</p>
+                        <div class="axios-code-container"><p>axios.get('https://usersapi.vercel.com/users')
+                            .then(response => response.json())
+                            .then(data => console.log(data))</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <p>Bruno Soares</p>
+                <p class="footer-date" id="footer-date"></p>
+            </div>
+        </footer>
     </div>
+      <!-- Js -->
+      <script type="text/javascript" src="./js/index.js" async defer></script>
 </body>
 </html>
