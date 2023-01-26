@@ -8,22 +8,22 @@ const PORT = process.env.PORT || 5020
 const app = express()
 
 //Static page
-app.use(express.static('./access'))
+// app.use(express.static('./access'))
 
-//
-app.use(express.urlencoded({extended: true}))
+// //
+// app.use(express.urlencoded({extended: true}))
 
-//Home Page
-app.get('/', (req, res) => {
-    res.status(200).sendFile(path.resolve(__dirname,'./access/home.html'))
-})
+// //Home Page
+// app.get('/', (req, res) => {
+//     res.status(200).sendFile(path.resolve(__dirname,'./access/home.html'))
+// })
 
-app.get('/users',(req,res) => {
+app.get('https://usersapi.vercel.app/users',(req,res) => {
    res.status(200).json(users)
 })
 
 //params
-app.get("/users/:id", (req,res) => {
+app.get("https://usersapi.vercel.app/users/:id", (req,res) => {
     //params
     const { id } = req.params
     //Find params
@@ -37,7 +37,7 @@ app.get("/users/:id", (req,res) => {
 })
 
 //query
-app.get('/user',(req, res) => {
+app.get('https://usersapi.vercel.app/user',(req, res) => {
     const { name} = req.query
 
     //find name
