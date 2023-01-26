@@ -3,27 +3,30 @@ const path = require('path')
 const { users }  = require('./data')
 const PORT = process.env.PORT || 5020
 
+const https = require('https')
+const fs = require('fs')
+
 
 
 const app = express()
 
 //Static page
-// app.use(express.static('./access'))
+app.use(express.static('./access'))
 
-// //
-// app.use(express.urlencoded({extended: true}))
+//
+app.use(express.urlencoded({extended: true}))
 
-// //Home Page
-// app.get('/', (req, res) => {
-//     res.status(200).sendFile(path.resolve(__dirname,'./access/home.html'))
-// })
+//Home Page
+app.get('/', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname,'./access/index.html'))
+})
 
-app.get('https://usersapi.vercel.app/users',(req,res) => {
+app.get('/users',(req,res) => {
    res.status(200).json(users)
 })
 
 //params
-app.get("https://usersapi.vercel.app/users/:id", (req,res) => {
+app.get("/users/:id", (req,res) => {
     //params
     const { id } = req.params
     //Find params
@@ -37,7 +40,7 @@ app.get("https://usersapi.vercel.app/users/:id", (req,res) => {
 })
 
 //query
-app.get('https://usersapi.vercel.app/user',(req, res) => {
+app.get('/user',(req, res) => {
     const { name} = req.query
 
     //find name
@@ -55,5 +58,11 @@ app.get('https://usersapi.vercel.app/user',(req, res) => {
 
 
 
+const options = {
+    cert: fs.readFileSync('./config/cert.crt'),
+    key: fs.readFileSync('./config/cert.key')
+}
 
-app.listen(() => console.log(`https://usersapi.vercel.app/users`))
+https.createServer(options, app).listen(PORT,() =>console.log(`https://usersapi.vercel.app`))
+
+// app.listen(() => console.log(`https://usersapi.vercel.app/users`))

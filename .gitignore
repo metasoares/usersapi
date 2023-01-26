@@ -1,0 +1,6 @@
+node_modules/
+
+
+config/cer.crt
+config/cert.key
+package-lock.json
