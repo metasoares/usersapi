@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .8rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fafc;
+    color: #262626;
+    
+}
+
+.home-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  color: #22d3ee;
+}
+
+header > .nav-items {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-items > h2 > .title-link {
+    text-decoration: none;
+  color: #0f172a;
+}
+
+
+.nav-items > ul {
+    width: 30%;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+}
+
+ul > li > a {
+    text-decoration: none;
+  color: #0f172a;
+}
+
+.nav-items > .btn {
+  width: 5rem;
+  height: 1.5rem;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.nav-items > .btn > a {
+    color: #00D4FF; 
+    text-decoration: none;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    flex-direction: column;
+}
+
+.container > .usersapi-container {
+    width: 100%; 
+    /* height: 18rem;  */
+    height: 28rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usersapi-container > .left-usersapi-description {
+    width: 22rem;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.copyBoard-container {
+    width: 12.5rem;
+    height: 16px;
+    font-size: 9px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 6px;
+    color: #0F172A;
+    cursor: pointer;
+}
+
+.left-usersapi-description > strong {
+    font-size: 2rem;
+    /* color: rgb(4, 4, 33);  */
+    color: #00D4FF; 
+}
+
+.left-usersapi-description > p {
+    font-size: .8rem;
+    color: #262626;
+}
+
+.usersapi-description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+}
+
+.usersapi-description > .github-container {
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #be123c;
+    color: #ffffff;
+    font-size: small;
+}
+
+.github-icon{
+    width: 1rem;
+    height: 1rem;
+    /* background-color: antiquewhite; */
+    border-radius: 100%;
+}
+
+.usersapi-description > .doc-container {
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #be123c;
+    color: #ffffff;
+    font-size: small;
+}
+
+.doc-icon{
+    width: 1rem;
+    height: 1rem;
+    /* background-color: antiquewhite; */
+    border-radius: 100%;
+}
+
+.github-container, .doc-container {
+    cursor: pointer;
+}
+
+.usersapi-container > .right-usersapi-description {
+    /* width: 40%; */
+    width: 14rem;
+    height: 15rem;
+    /* background-color: #0f172a; */
+}
+
+.tech-image-container {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.details-usersapi-container {
+    width: 100%; 
+    height: 14rem; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.routes-container {
+    width: 14rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.routes-container > strong {
+    font-size: 1.5rem;
+    color: rgb(4, 4, 33); 
+}
+
+.routes-container > .routes-detail-container {
+    width: 100%;
+    height: max-content;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 2px 4px;
+}
+
+.routes-detail-container > ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.routes-detail-container > ul > .left {
+    display: flex;
+    flex: 1;
+}
+
+.routes-detail-container > ul > .right {
+    color: #00D4FF; 
+}
+
+.resource-container {
+    width: 14rem;
+    height: 100%;
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-container  > strong {
+    font-size: 1.5rem;
+    color: rgb(4, 4, 33); 
+}
+
+.resource-container > .resource-detail-container {
+    width: 100%;
+    height: 1.3rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 2px 4px;
+}
+
+.example-title {
+    font-size: 2rem;
+    color: #00D4FF; 
+    text-align: center;  
+}
+.example-codes-container {
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.example-codes-container > .fetch-example-code-container {
+    width: 15rem;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.fetch-example-code-container > strong , .axios-example-code-container > strong {
+    font-size: 1.5rem;
+    color: rgb(4, 4, 33); 
+
+}
+
+.fetch-code-container {
+    width: 13rem;
+    height: 3rem;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+    padding: 3px 4px;
+    display: flex;
+    justify-content: center;
+    color: #0F172A;
+}
+
+.fetch-code-container > p {
+    width: 100%;
+    height: max-content;
+    font-size: 10px;
+}
+
+.example-codes-container > .axios-example-code-container {
+    width: 22rem;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.axios-code-container {
+    width: 14rem;
+    height: 3rem;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+    padding: 3px 4px;
+    display: flex;
+    color: #0F172A;
+}
+
+.axios-code-container > p {
+    width: 100%;
+    height: max-content;
+    font-size: 10px;
+}
+
+
+footer {
+    width: 100%;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    font-size: smaller;
+    /* background-color: rgb(4, 4, 33); */
+    color: rgb(4, 4, 33); 
+
+}
